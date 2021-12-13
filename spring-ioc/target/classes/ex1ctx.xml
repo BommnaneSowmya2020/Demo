@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		<!-- <bean id="hi" class="ex1.Hello"/>  Default Constructor -->
+	
+		<!--  <bean id="hi" class ="ex1.Hello"> Parameterised constructor-->
+		<!-- 	<constructor-arg value="Hello Spring"/>
+		<!</bean>-->
+
+ 		<!--    <bean id="hi" class="ex1.Hello"> Default Constructor then calling setter method
+			<property name="message" value="Hola Spring"/>
+		</bean>-->
+
+		<bean id="str" class="java.lang.String">
+			<constructor-arg value="Bonjour Spring" />
+		</bean>
+  
+   		 <!-- Constructor Injection -->
+   		 <!--   <bean id="hi" class="ex1.Hello">
+   			 <constructor-arg ref="str" />
+   		 </bean>-->
+   			
+   			 <!-- Setter Injection -->
+   		<bean id="hi" class="ex5.Hello">
+   			 <constructor-arg name="message" ref="str"/>
+   		</bean>
+
+</beans>
+
+
